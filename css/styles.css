@@ -18,6 +18,67 @@ body {
   --section-color: #f5f4fa;
   --footer-color: #2f303a;
 }
+
+/* Сброс для заголовков, списков, заголовков, картинок */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+}
+
+/* Скрываем логические заголовки */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* убирает все маркеры из списков. 
+при необходимости убрать этот класс из нужного тэга */
+
+.list-type {
+  list-style-type: none;
+}
 /* цветовая разметка всех секций сайта */
 
 header {
@@ -34,13 +95,6 @@ footer {
 }
 .team li {
   background-color: var(--white-color);
-}
-
-/* убирает все маркеры из списков. 
-при необходимости убрать этот класс из нужного тэга */
-
-.list-type {
-  list-style-type: none;
 }
 
 /* цветовая разметка фильтра портфолио и эффект при наведении*/
@@ -91,14 +145,12 @@ footer {
 
 .logo {
   color: var(--text-logo-color);
-  text-decoration: none;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
 }
 .logo-foot {
   color: var(--white-color);
-  text-decoration: none;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
@@ -111,7 +163,6 @@ footer {
 
 .site-nav-list a {
   color: var(--secondary-text-color);
-  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -125,7 +176,6 @@ footer {
 }
 .address a {
   color: var(--primary-text-color);
-  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -140,7 +190,6 @@ footer {
 }
 .address-foot a {
   color: var(--text-address-color);
-  text-decoration: none;
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
