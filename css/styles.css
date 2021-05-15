@@ -1,0 +1,201 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+}
+/* подключаем шрифт к логотипу */
+.logo,
+.logo-foot {
+  font-family: 'Raleway', sans-serif;
+}
+/* объявляем переменные цвета */
+:root {
+  --accent-color: #2196f3;
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --text-address-color: rgba(255, 255, 255, 0.6);
+  --text-logo-color: #000000;
+  --white-color: #ffffff;
+  --section-color: #f5f4fa;
+  --footer-color: #2f303a;
+}
+/* цветовая разметка всех секций сайта */
+
+header {
+  background-color: var(--white-color);
+}
+.hero {
+  background-color: var(--footer-color);
+}
+.team {
+  background-color: var(--section-color);
+}
+footer {
+  background-color: var(--footer-color);
+}
+.team li {
+  background-color: var(--white-color);
+}
+
+/* убирает все маркеры из списков. 
+при необходимости убрать этот класс из нужного тэга */
+
+.list-type {
+  list-style-type: none;
+}
+
+/* цветовая разметка фильтра портфолио и эффект при наведении*/
+
+.portfol-list button {
+  background-color: var(--section-color);
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  font-family: inherit;
+}
+.portfol button:hover,
+.portfol button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+/* цвет кнопки ЗАКАЗАТЬ УСЛУГУ */
+
+.button-primary {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  text-align: center;
+  font-family: inherit;
+}
+.button-primary:hover,
+.button-primary:focus {
+  cursor: pointer;
+}
+
+/* изменяем главный заголовок Цвет изменится в дальнейшем */
+
+.hero-title {
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  text-align: center;
+}
+
+/* редактируем логотип WebStudio */
+
+.logo {
+  color: var(--text-logo-color);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.logo-foot {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.logotip {
+  color: var(--accent-color);
+}
+
+/* редактируем навигацию и адреса */
+
+.site-nav-list a {
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.site-nav-list a:hover,
+.site-nav-list a:focus {
+  color: var(--accent-color);
+}
+.site-nav-list .current {
+  color: var(--accent-color);
+}
+.address a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.address a:hover,
+.address a:focus {
+  color: var(--accent-color);
+}
+.address-foot a[href="https://goo.gl/maps/ENBTeQWaKfRkF7op7"]
+{
+  color: var(--white-color);
+}
+.address-foot a {
+  color: var(--text-address-color);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+}
+
+/* редактируем секцию features */
+
+.features-list h3 {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
+}
+.features-list p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* редактируем секцию work */
+
+.work {
+  color: var(--secondary-text-color);
+}
+.work-title {
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* редактируем секцию Наша команда */
+
+.team-title {
+  color: var(--secondary-text-color);
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+.team h3 {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+}
+.team p {
+  text-align: center;
+}
+
+/* редактируем секцию Наши проекты */
+
+.project-list h3 {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  line-height: 2;
+}
+.project-list p {
+  line-height: 1.9;
+}
