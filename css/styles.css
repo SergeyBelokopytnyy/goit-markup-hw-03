@@ -2,12 +2,16 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
 }
+
 /* подключаем шрифт к логотипу */
+
 .logo,
 .logo-foot {
   font-family: 'Raleway', sans-serif;
 }
-/* объявляем переменные цвета */
+
+/* ОБЪЯВЛЯЕМ ПЕРЕМЕННЫЕ ЦВЕТОВ */
+
 :root {
   --accent-color: #2196f3;
   --primary-text-color: #757575;
@@ -17,9 +21,12 @@ body {
   --white-color: #ffffff;
   --section-color: #f5f4fa;
   --footer-color: #2f303a;
+  --border-header-color: #ececec;
+  --border-cards-color: #eeeeee;
 }
 
-/* Сброс для заголовков, списков, заголовков, картинок */
+/* ОБЩИЙ СБРОС ДЛЯ ЗАГОЛОВКОВ, СПИСКОВ, ПАРАГРАФОВ, ССЫЛОК, КАРТИНОК */
+
 h1,
 h2,
 h3,
@@ -51,13 +58,13 @@ img {
 }
 
 .list {
-  width: 660px;
+  /* width: 660px; */
   margin-left: auto;
   margin-right: auto;
   font-size: 0;
 }
 
-/* Скрываем логические заголовки */
+/* СКРЫВАЕТ ЛОГИЧЕСКИЕ ЗАГОЛОВКИ */
 
 .visually-hidden {
   position: absolute;
@@ -73,19 +80,23 @@ img {
   overflow: hidden;
 }
 
-/* убирает все маркеры из списков. 
+/* УБИРАЕТ ВСЕ МАРКЕРЫ ИЗ СПИСКОВ. 
 при необходимости убрать этот класс из нужного тэга */
 
 .list-type {
   list-style-type: none;
 }
-/* цветовая разметка всех секций сайта */
 
-header {
+/* ЦВЕТОВАЯ РАЗМЕТКА СЕКЦИЙ */
+
+.header {
   background-color: var(--white-color);
+  border-bottom: 1px solid var(--border-header-color);
 }
 .hero {
   background-color: var(--footer-color);
+  padding-top: 200px;
+  padding-bottom: 280px;
 }
 .team {
   background-color: var(--section-color);
@@ -97,7 +108,7 @@ footer {
   background-color: var(--white-color);
 }
 
-/* цветовая разметка фильтра портфолио и эффект при наведении*/
+/* КНОПКИ-ФИЛЬТР В СЕКЦИИ ПОРТФОЛИО */
 
 .portfol-list button {
   background-color: var(--section-color);
@@ -107,6 +118,13 @@ footer {
   line-height: 1.6;
   text-align: center;
   font-family: inherit;
+  border-radius: 4px;
+  margin-bottom: 50px;
+  padding: 6px 22px;
+  border-color: transparent;
+}
+.portfol-item:not(:last-child) {
+  padding-right: 8px;
 }
 .portfol button:hover,
 .portfol button:focus {
@@ -114,7 +132,16 @@ footer {
   color: var(--white-color);
   cursor: pointer;
 }
-/* цвет кнопки ЗАКАЗАТЬ УСЛУГУ */
+/* ОСНОВНОЙ КОНТЕЙНЕР */
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* ГЛАВНАЯ КНОПКА (ЗАКАЗАТЬ УСЛУГУ) */
 
 .button-primary {
   background-color: var(--accent-color);
@@ -124,13 +151,22 @@ footer {
   line-height: 1.87;
   text-align: center;
   font-family: inherit;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 4px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-top: 10px;
+  border: none;
 }
 .button-primary:hover,
 .button-primary:focus {
   cursor: pointer;
 }
 
-/* изменяем главный заголовок Цвет изменится в дальнейшем */
+/* ГЛАВНЫЙ ЗАГОЛОВОК */
 
 .hero-title {
   color: var(--white-color);
@@ -139,15 +175,17 @@ footer {
   font-weight: 900;
   line-height: 1.36;
   text-align: center;
+  margin-bottom: 30px;
 }
 
-/* редактируем логотип WebStudio */
+/* ЛОГОТИП WebStudio (для хедера и футера)*/
 
 .logo {
   color: var(--text-logo-color);
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
+  padding-right: 93px;
 }
 .logo-foot {
   color: var(--white-color);
@@ -159,7 +197,7 @@ footer {
   color: var(--accent-color);
 }
 
-/* редактируем навигацию и адреса */
+/* НАВИГАЦИЯ И АДРЕСА */
 
 .site-nav-list a {
   color: var(--secondary-text-color);
@@ -193,9 +231,17 @@ footer {
   font-size: 14px;
   line-height: 1.7;
   font-style: normal;
+  text-decoration: none;
+}
+.address-foot {
+  margin-top: 20px;
+}
+.container-foot {
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
-/* редактируем секцию features */
+/* ОСОБЕННОСТИ (скрытый заголовок) */
 
 .features-list h3 {
   color: var(--secondary-text-color);
@@ -207,8 +253,17 @@ footer {
   font-size: 14px;
   line-height: 1.7;
 }
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+.features-item {
+  width: 270px;
+}
+.features-item-title {
+  margin-bottom: 10px;
+}
 
-/* редактируем секцию work */
+/* ЧЕМ МЫ ЗАНИМАЕМСЯ */
 
 .work {
   color: var(--secondary-text-color);
@@ -217,15 +272,25 @@ footer {
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 50px;
+}
+.work-item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.work-list {
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
-/* редактируем секцию Наша команда */
+/* НАША КОМАНДА */
 
 .team-title {
   color: var(--secondary-text-color);
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 50px;
 }
 .team h3 {
   color: var(--secondary-text-color);
@@ -236,15 +301,104 @@ footer {
 }
 .team p {
   text-align: center;
+  font-size: 16px;
+}
+.team-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-list {
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
-/* редактируем секцию Наши проекты */
+/* НАШИ ПРОЕКТЫ */
 
 .project-list h3 {
   color: var(--secondary-text-color);
   font-size: 18px;
   line-height: 2;
+  margin-bottom: 4px;
 }
 .project-list p {
   line-height: 1.9;
+  font-size: 16px;
+}
+.project-item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.project-list {
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.project-cards {
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-top: 20px;
+  border: 1px solid var(--border-cards-color);
+}
+/* ФЛЕКСЫ В ГОЛОВЕ САЙТА */
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.site-nav-list {
+  display: flex;
+  flex-direction: row;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+.address {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0px;
+}
+
+.mail {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+/* ФЛЕКСЫ НА СТРАНИЦАХ */
+
+.all-flexx {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.project-list {
+  flex-wrap: wrap;
+}
+
+/* РАЗДВИГАЕМ СЕКЦИИ */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section.work {
+  padding-top: 47px;
+}
+.section.features {
+  padding-bottom: 47px;
+}
+.team.section h3 {
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.team.section p {
+  padding-top: 5px;
+  padding-bottom: 30px;
 }
