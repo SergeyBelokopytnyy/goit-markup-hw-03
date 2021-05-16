@@ -96,7 +96,7 @@ img {
 .hero {
   background-color: var(--footer-color);
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 }
 .team {
   background-color: var(--section-color);
