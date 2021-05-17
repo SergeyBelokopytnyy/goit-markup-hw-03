@@ -43,9 +43,6 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-}
-
-.list {
   list-style: none;
 }
 
@@ -55,13 +52,6 @@ ol {
 
 img {
   display: block;
-}
-
-.list {
-  /* width: 660px; */
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0;
 }
 
 /* СКРЫВАЕТ ЛОГИЧЕСКИЕ ЗАГОЛОВКИ */
@@ -80,18 +70,13 @@ img {
   overflow: hidden;
 }
 
-/* УБИРАЕТ ВСЕ МАРКЕРЫ ИЗ СПИСКОВ. 
-при необходимости убрать этот класс из нужного тэга */
-
-.list-type {
-  list-style-type: none;
-}
-
 /* ЦВЕТОВАЯ РАЗМЕТКА СЕКЦИЙ */
 
 .header {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--border-header-color);
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 .hero {
   background-color: var(--footer-color);
@@ -110,6 +95,10 @@ footer {
 
 /* КНОПКИ-ФИЛЬТР В СЕКЦИИ ПОРТФОЛИО */
 
+.portfol-list {
+  margin-bottom: 50px;
+}
+
 .portfol-list button {
   background-color: var(--section-color);
   color: var(--secondary-text-color);
@@ -119,12 +108,11 @@ footer {
   text-align: center;
   font-family: inherit;
   border-radius: 4px;
-  margin-bottom: 50px;
   padding: 6px 22px;
   border-color: transparent;
 }
 .portfol-item:not(:last-child) {
-  padding-right: 8px;
+  margin-right: 8px;
 }
 .portfol button:hover,
 .portfol button:focus {
@@ -132,6 +120,7 @@ footer {
   color: var(--white-color);
   cursor: pointer;
 }
+
 /* ОСНОВНОЙ КОНТЕЙНЕР */
 
 .container {
@@ -141,6 +130,7 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
+
 /* ГЛАВНАЯ КНОПКА (ЗАКАЗАТЬ УСЛУГУ) */
 
 .button-primary {
@@ -185,7 +175,7 @@ footer {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
-  padding-right: 93px;
+  margin-right: 93px;
 }
 .logo-foot {
   color: var(--white-color);
@@ -233,7 +223,7 @@ footer {
   font-style: normal;
   text-decoration: none;
 }
-.address-foot {
+.address-list {
   margin-top: 20px;
 }
 .container-foot {
@@ -298,6 +288,7 @@ footer {
   line-height: 1.2;
   font-weight: 500;
   text-align: center;
+  margin-bottom: 10px;
 }
 .team p {
   text-align: center;
@@ -313,6 +304,12 @@ footer {
 .team-list {
   margin-top: -30px;
   margin-left: -30px;
+}
+.team-cards {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 /* НАШИ ПРОЕКТЫ */
@@ -341,7 +338,9 @@ footer {
   padding-left: 24px;
   padding-top: 20px;
   border: 1px solid var(--border-cards-color);
+  border-top: none;
 }
+
 /* ФЛЕКСЫ В ГОЛОВЕ САЙТА */
 
 header .container {
@@ -356,14 +355,11 @@ header .container {
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav {
-  padding-bottom: 32px;
-  padding-top: 32px;
-}
+
 .address {
   display: flex;
   flex-direction: row;
-  margin-right: 0px;
+  margin-left: auto;
 }
 
 .mail {
@@ -393,12 +389,4 @@ header .container {
 }
 .section.features {
   padding-bottom: 47px;
-}
-.team.section h3 {
-  padding-top: 30px;
-  padding-bottom: 5px;
-}
-.team.section p {
-  padding-top: 5px;
-  padding-bottom: 30px;
 }
